@@ -1,0 +1,287 @@
+<html>
+<head>
+	<script src="wordboy.js"></script>
+</head>
+<body  onload="onl()">	</body>
+<script>
+
+// These letters will be reserved for the special cartrige.
+// The special cartrige will show the same message in all the
+// printed WordBoys.
+var InjectMap=[
+	{position:3,letter:"T"},
+	{position:50,letter:"I"},
+	{position:100,letter:"A"},
+	{position:130,letter:"M"},
+	{position:250,letter:"O"}
+];
+
+// You can customize the WordBoy label, the top text and the avatar path.
+var WordBoyLabel="RememberBoy";
+var WordBoyTitle="DOT MATRIX WITH STEREO SOUND";
+var ImagesRoot="avatar/";
+
+var WordBoys=[
+	{
+		fileName:"wordboy-brenna.svg",
+		fontFamily:"Early GameBoy",
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		injectMap:InjectMap,
+		sentences:[
+			{
+				label:"Arnald Emblem",
+				metadata:{
+					lineA:{text:"In Fire Emblem Fates, il"},
+					lineB:{text:"Principe Xander ti dice:"},
+					avatar:{image:ImagesRoot+"xander.png"}
+				},
+				text:"La giustizia e' illusoria. Non esiste una via di luce che conduca sempre al bene o una oscura che porti al male. Contano solo le nostre scelte, specialmente le difficili"
+			},
+			{
+				label:"Nikoletta III",
+				metadata:{
+					lineA:{text:"In Okami, Waka il"},
+					lineB:{text:"guardiano ti dice:"},
+					avatar:{image:ImagesRoot+"waka.png"}
+				},
+				text:"L'esito e' secondario. E' la risolutezza che determina il valore della vita"
+			},
+			{
+				label:"Sergio Jr. Crossing",
+				metadata:{
+					lineA:{text:"In Animal Crossing, il"},
+					lineB:{text:"sindaco ti dice:"},
+					avatar:{image:ImagesRoot+"mayor.png"}
+				},
+				text:"Non desiderare che le cose siano piu' facili. Desidera di essere migliore"
+			},
+			{
+				label:"The Legend of Gaia",
+				metadata:{
+					lineA:{text:"In Zelda OOT, Zelda la"},
+					lineB:{text:"principessa ti dice:"},
+					avatar:{image:ImagesRoot+"zelda-oot.png"}
+				},
+				text:"L'amicizia presto fiorira' in un potere virtuoso e, grazie a essa, saprai quale strada prendere"
+			}
+		]
+	},
+	{
+		fileName:"wordboy-mammafra.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[
+			{
+				label:"Maria Shock",
+				metadata:{
+					lineA:{text:"In Bioshock la genetista"},
+					lineB:{text:"Brigid Tenenbaum ti dice:"},
+					avatar:{image:ImagesRoot+"tenenbaum.png"}
+				},
+				text:"Hai dato loro l'unica cosa che gli e' stata rubata. Una chance. Di imparare, trovare l'amore, vivere. E qual e' stata la ricompensa? Non lo hai mai detto. Ma penso di saperlo: una famiglia"
+			},
+			{
+				label:"Claudio Effect 2",
+				metadata:{
+					lineA:{text:"In Mass Effect 2, Legion"},
+					lineB:{text:"l'androide ti dice:"},
+					avatar:{image:ImagesRoot+"legion.png"}
+				},
+				text:"Tutti i punti di vista sono utili, anche quelli sbagliati - se possiamo giudicare il motivo per cui una visione errata e' stata accettata"
+			},
+			{
+				label:"Test",
+				metadata:{
+					lineA:{text:"Unknown"},
+					lineB:{text:"Unknown"},
+					avatar:{image:ImagesRoot+"test.png"}
+				},
+				injectMap:true
+			}
+		]
+	},
+	{
+		fileName:"wordboy-colombo.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[
+			{
+				label:"Lory Blade",
+				metadata:{
+					lineA:{text:"In Hellblade, il"},
+					lineB:{text:"narratore ti ricorda:"},
+					avatar:{image:ImagesRoot+"hellblade.png"}
+				},
+				text:"Non scordare com'e' vedere il mondo da bambino. Nemmeno nelle tenebre la sua meraviglia e bellezza svaniscono. Sono sempre li', in attesa di essere viste di nuovo"
+			},
+			{
+				label:"Nicola Effect II",
+				metadata:{
+					lineA:{text:"In Mass Effect 2, Mordin"},
+					lineB:{text:"il genetista ti dice:"},
+					avatar:{image:ImagesRoot+"mordin.png"}
+				},
+				text:"La vita e' una negoziazione. Tutti noi vogliamo. Tutti noi diamo per ottenere quello che vogliamo",
+			},
+			{
+				label:"Eva Chronicles",
+				metadata:{
+					lineA:{text:"In Xenoblade Chronicles,"},
+					lineB:{text:"Shulk l'eroe ti dice:"},
+					avatar:{image:ImagesRoot+"shulk.png"}
+				},
+				text:"Non so cosa riserva il futuro. Ma questo significa che posso inventarlo. Possiamo ottenere tutto cio' che ci viene in mente"
+			}
+		]
+	},
+	{
+		fileName:"wordboy-rosy.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[
+			{
+				label:"Rosy 4 Arena",
+				metadata:{
+					lineA:{text:"In Persona 4 Arena, Yu"},
+					lineB:{text:"lo studente ti dice:"},
+					avatar:{image:ImagesRoot+"yu.png"}
+				},
+				text:"Lavorare per un domani migliore non e' una cosa che si fa una volta sola. I domani continuano ad arrivare"
+			},
+			{
+				label:"Sofya",
+				metadata:{
+					lineA:{text:"In Okami, Sakuya, spirito"},
+					lineB:{text:"dell'albero, ti dice:"},
+					avatar:{image:ImagesRoot+"sakuya.png"}
+				},
+				text:"Il fresco profumo dei fiori ti protegga sempre",
+			},
+			{
+				label:"The Damian II",
+				metadata:{
+					lineA:{text:"In The Witcher 2, Zoltan"},
+					lineB:{text:"il nano ti dice:"},
+					avatar:{image:ImagesRoot+"zoltan.png"}
+				},
+				text:"Bere da soli e' brutto come fare la cacca in compagnia"
+			}
+		]
+	},
+	{
+		fileName:"wordboy-giuseppe.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[			
+			{
+				label:"Giuseppes Creed",
+				metadata:{
+					lineA:{text:"In Assassin's Creed,"},
+					lineB:{text:"Altair il leader ti dice:"},
+					avatar:{image:ImagesRoot+"altair.png"}
+				},
+				text:"Solo una mente senza barriere e' in grado di cogliere la bellezza caotica del mondo"
+			}			
+		]
+	},
+	{
+		fileName:"wordboy-brennasenior.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[
+			{
+				label:"The World is Uly",
+				metadata:{
+					lineA:{text:"In The World Ends With You,"},
+					lineB:{text:"Shiki Misaki ti dice:"},
+					avatar:{image:ImagesRoot+"shiki.png"}
+				},
+				text:"A volte tutto cio' di cui le persone hanno bisogno e' un buon ascoltatore"
+			},
+			{
+				label:"The Legend of Sergio",
+				metadata:{
+					lineA:{text:"In Zelda BOTW, la"},
+					lineB:{text:"principessa Zelda ti dice:"},
+					avatar:{image:ImagesRoot+"zelda-botw.png"}
+				},
+				text:"Potresti vivere un momento in cui non hai ancora recuperato il tuo potere o tutti i tuoi ricordi, ma il coraggio non deve essere ricordato, perche' non viene mai dimenticato."
+			}
+		]
+	},
+	{
+		fileName:"wordboy-testimoni.svg",
+		fontFamily:"Early GameBoy",
+		injectMap:InjectMap,
+		metadata:{
+			wordBoyTitle:WordBoyTitle,
+			bodyLabel:WordBoyLabel
+		},
+		sentences:[
+			{
+				label:"NinJoe Effect 3",
+				metadata:{
+					lineA:{text:"In Mass Effect 3, Mordin"},
+					lineB:{text:"in genetista ti dice:"},
+					avatar:{image:ImagesRoot+"mordin.png"}
+				},
+				text:"Dovevo essere io a farlo. Qualcun altro avrebbe potuto sbagliare"
+			},			
+			{
+				label:"Super Peppe Bros.",
+				metadata:{
+					lineA:{text:"In Super Mario Bros., Toad"},
+					lineB:{text:"il fungo ti dice:"},
+					avatar:{image:ImagesRoot+"toad.png"}
+				},
+				text:"Grazie Mario! Ma la nostra Principessa e' in un altro castello"
+			}
+		]
+	}
+];
+
+function downloadWordBoy(id) {
+	var wb=new WordBoy(WordBoys[id]);
+	wb.downloadSvg();
+}
+
+function viewWordBoy(id) {
+	var wb=new WordBoy(WordBoys[id]);
+	wb.getSvg(function(svg){
+		document.getElementById("svg").innerHTML=svg;
+	});
+}
+
+function onl() {
+	var html="";
+	for (var i=0;i<WordBoys.length;i++) {
+		html+=WordBoys[i].fileName+": <input type=button value='View' onclick='viewWordBoy("+i+")'> <input type=button value='Download' onclick='downloadWordBoy("+i+")'><br>";
+	}
+	document.body.innerHTML=html+"<hr><svg id='svg' width=10000 height=10000></svg>";
+}
+
+</script>
+</html>
